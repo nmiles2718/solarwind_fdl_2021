@@ -4,14 +4,28 @@
 Solar Wind FDL 2021
 ===================
 
-This repository contains the work completed by the solar wind heliophysics team during FDL 2021
+This page contains all the software documentation written by the Heliophysics Solar Wind Team during the Frontier Development Lab's 2021 summer program.
+
+
+.. warning::
+    This documentation is a work in progress! Stay tuned for the final version. 
+
+Contents
+________
+
+
+.. toctree::
+   :maxdepth: 2
+
+   meet_the_team
+   utils
+
 
 
 Example Heading
 ---------------
 
-
-Example numbered list
+**Example numbered list**
 
     #. First item
 
@@ -20,24 +34,6 @@ Example numbered list
     #. Second Item
 
        * sub item
-
-Example bulleted list
-
-    * First item
-
-      * sub item
-
-    * Second item
-
-      * sub item
-
-Contents:
-
-.. toctree::
-   :maxdepth: 2
-
-   prototyping_metrics
-
 
 
 
