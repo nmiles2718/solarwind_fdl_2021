@@ -17,7 +17,6 @@ sys.path.append(
     '/Users/ndmiles/fdl-2021-solar-wind-repository/src'
 )
 
-import utils
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -112,7 +111,7 @@ html_theme = 'sphinx_rtd_theme'
 
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []
-html_static_path = ['_static']
+# html_static_path = ['_static']
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
