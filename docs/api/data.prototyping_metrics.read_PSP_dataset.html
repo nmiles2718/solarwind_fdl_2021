@@ -95,8 +95,11 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../meet_the_team.html">Meet the Team</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../data.html">Data Subpackage</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../data.html#module-data.data_loader">data.data_loader Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data.html#module-data.generate_catalog">data.generate_catalog Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data.html#module-data.helper_funcs">data.helper_funcs Module</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../data.html#module-data.prototyping_metrics">data.prototyping_metrics Module</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="../data.html#functions">Functions</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../data.html#id3">Functions</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="data.prototyping_metrics.check_sampling_freq.html">check_sampling_freq</a></li>
 <li class="toctree-l4"><a class="reference internal" href="data.prototyping_metrics.compute_B_diff_stats.html">compute_B_diff_stats</a></li>
 <li class="toctree-l4"><a class="reference internal" href="data.prototyping_metrics.compute_B_field_stats.html">compute_B_field_stats</a></li>
@@ -110,7 +113,6 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../data.html#module-data.generate_catalog">data.generate_catalog Module</a></li>
 </ul>
 </li>
 </ul>
@@ -186,11 +188,18 @@
 <h1>read_PSP_dataset<a class="headerlink" href="#read-psp-dataset" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="data.prototyping_metrics.read_PSP_dataset">
-<span class="sig-prename descclassname"><span class="pre">data.prototyping_metrics.</span></span><span class="sig-name descname"><span class="pre">read_PSP_dataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#data.prototyping_metrics.read_PSP_dataset" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">data.prototyping_metrics.</span></span><span class="sig-name descname"><span class="pre">read_PSP_dataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orbit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rads_norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exponents_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#data.prototyping_metrics.read_PSP_dataset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function for reading in the PSP dataset</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>fname</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – Filename of dataset to read in</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fname</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – Filename of dataset to read in</p></li>
+<li><p><strong>orbit</strong> (<em>pd.DataFrame</em>) – Dataframe with instrument’s orbit</p></li>
+<li><p><strong>rads_norm</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) – Flag that triggers the normalization of the magnetic field according to the
+distance to the Sun</p></li>
+<li><p><strong>exponents_list</strong> (<em>np.array</em>) – Provides list of exponents for each mgn component to normalize the mgn field with respect
+to the radial distance from the Sun</p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p><strong>mag_df</strong> – Pandas dataframe containing the magnetometer data</p>

@@ -43,6 +43,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="fname_to_datetime" href="data.helper_funcs.fname_to_datetime.html" />
     <link rel="prev" title="analyze_file" href="data.generate_catalog.analyze_file.html" /> 
 </head>
 
@@ -94,7 +95,7 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../meet_the_team.html">Meet the Team</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../data.html">Data Subpackage</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../data.html#module-data.prototyping_metrics">data.prototyping_metrics Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data.html#module-data.data_loader">data.data_loader Module</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../data.html#module-data.generate_catalog">data.generate_catalog Module</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="../data.html#id1">Functions</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="data.generate_catalog.analyze_file.html">analyze_file</a></li>
@@ -103,6 +104,8 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../data.html#module-data.helper_funcs">data.helper_funcs Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data.html#module-data.prototyping_metrics">data.prototyping_metrics Module</a></li>
 </ul>
 </li>
 </ul>
@@ -178,7 +181,7 @@
 <h1>generate_catalog<a class="headerlink" href="#generate-catalog" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="data.generate_catalog.generate_catalog">
-<span class="sig-prename descclassname"><span class="pre">data.generate_catalog.</span></span><span class="sig-name descname"><span class="pre">generate_catalog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_year</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop_year</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parallel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instrument</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orbit_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#data.generate_catalog.generate_catalog" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">data.generate_catalog.</span></span><span class="sig-name descname"><span class="pre">generate_catalog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_year</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop_year</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parallel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instrument</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orbit_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">histogram</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hist_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bin_width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rads_norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exponents_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#data.generate_catalog.generate_catalog" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate a catalog of all the data between start_year and stop_year</p>
 <p>This function will create a master catalog containing that
 describes the quality of the data contained in a given CDF file.
@@ -197,6 +200,13 @@ Facilitates processing only handful of files to expedite debugging.</p></li>
 <li><p><strong>instrument</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – Solar wind instrument to process</p></li>
 <li><p><strong>orbit_file</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – Location of the csv with instrument’s orbit</p></li>
 <li><p><strong>save_number</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – Number of files after which the program saves progress.  Default 100</p></li>
+<li><p><strong>histogram</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) – Flag that triggers the creation of the data histogram</p></li>
+<li><p><strong>hist_max</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) – Maximum magnetic field to be included in histogram</p></li>
+<li><p><strong>bin_width</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) – Bin width to use in the histogram</p></li>
+<li><p><strong>rads_norm</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) – Flag that triggers the normalization of the magnetic field according to the
+distance to the Sun</p></li>
+<li><p><strong>exponents_list</strong> (<em>np.array</em>) – Provides list of exponents for each mgn component to normalize the mgn field with respect
+to the radial distance from the Sun</p></li>
 </ul>
 </dd>
 </dl>
@@ -210,6 +220,7 @@ Facilitates processing only handful of files to expedite debugging.</p></li>
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="data.helper_funcs.fname_to_datetime.html" class="btn btn-neutral float-right" title="fname_to_datetime" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="data.generate_catalog.analyze_file.html" class="btn btn-neutral float-left" title="analyze_file" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 

@@ -43,7 +43,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="check_sampling_freq" href="api/data.prototyping_metrics.check_sampling_freq.html" />
+    <link rel="next" title="main" href="api/data.data_loader.main.html" />
     <link rel="prev" title="Meet the Team" href="meet_the_team.html" /> 
 </head>
 
@@ -95,8 +95,38 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="meet_the_team.html">Meet the Team</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Data Subpackage</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#module-data.prototyping_metrics">data.prototyping_metrics Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-data.data_loader">data.data_loader Module</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/data.data_loader.main.html">main</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/data.data_loader.LoadDataframe.html">LoadDataframe</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-data.generate_catalog">data.generate_catalog Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/data.generate_catalog.analyze_file.html">analyze_file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/data.generate_catalog.generate_catalog.html">generate_catalog</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-data.helper_funcs">data.helper_funcs Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/data.helper_funcs.fname_to_datetime.html">fname_to_datetime</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/data.helper_funcs.get_resampled.html">get_resampled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/data.helper_funcs.get_time_chunck_list.html">get_time_chunck_list</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/data.helper_funcs.get_time_chunk.html">get_time_chunk</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/data.helper_funcs.sliding_window.html">sliding_window</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-data.prototyping_metrics">data.prototyping_metrics Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Functions</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="api/data.prototyping_metrics.check_sampling_freq.html">check_sampling_freq</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/data.prototyping_metrics.compute_B_diff_stats.html">compute_B_diff_stats</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/data.prototyping_metrics.compute_B_field_stats.html">compute_B_field_stats</a></li>
@@ -106,14 +136,6 @@
 <li class="toctree-l4"><a class="reference internal" href="api/data.prototyping_metrics.read_PSP_dataset.html">read_PSP_dataset</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/data.prototyping_metrics.read_WIND_dataset.html">read_WIND_dataset</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/data.prototyping_metrics.return_nans.html">return_nans</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#module-data.generate_catalog">data.generate_catalog Module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id1">Functions</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="api/data.generate_catalog.analyze_file.html">analyze_file</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/data.generate_catalog.generate_catalog.html">generate_catalog</a></li>
 </ul>
 </li>
 </ul>
@@ -189,12 +211,98 @@
             
   <section id="data-subpackage">
 <h1>Data Subpackage<a class="headerlink" href="#data-subpackage" title="Permalink to this headline">¶</a></h1>
+<section id="module-data.data_loader">
+<span id="data-data-loader-module"></span><h2>data.data_loader Module<a class="headerlink" href="#module-data.data_loader" title="Permalink to this headline">¶</a></h2>
+<p>This module converts timeseries to images for a
+single WIND or PSP dataset</p>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="api/data.data_loader.main.html#data.data_loader.main" title="data.data_loader.main"><code class="xref py py-obj docutils literal notranslate"><span class="pre">main</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="api/data.data_loader.LoadDataframe.html#data.data_loader.LoadDataframe" title="data.data_loader.LoadDataframe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LoadDataframe</span></code></a>(filelist)</p></td>
+<td><p>class to convert time series to image</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="module-data.generate_catalog">
+<span id="data-generate-catalog-module"></span><h2>data.generate_catalog Module<a class="headerlink" href="#module-data.generate_catalog" title="Permalink to this headline">¶</a></h2>
+<p>This module is used to generate a data catalog containing
+information about the sampling rates, magnetic field, and
+the quality of the data.’</p>
+<section id="id1">
+<h3>Functions<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="api/data.generate_catalog.analyze_file.html#data.generate_catalog.analyze_file" title="data.generate_catalog.analyze_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">analyze_file</span></code></a>([fname, instrument, orbit, …])</p></td>
+<td><p>Convenience function to handle all the steps</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="api/data.generate_catalog.generate_catalog.html#data.generate_catalog.generate_catalog" title="data.generate_catalog.generate_catalog"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_catalog</span></code></a>([start_year, stop_year, …])</p></td>
+<td><p>Generate a catalog of all the data between start_year and stop_year</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="module-data.helper_funcs">
+<span id="data-helper-funcs-module"></span><h2>data.helper_funcs Module<a class="headerlink" href="#module-data.helper_funcs" title="Permalink to this headline">¶</a></h2>
+<p>This module contains all the helper functions that</p>
+<section id="id2">
+<h3>Functions<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="api/data.helper_funcs.fname_to_datetime.html#data.helper_funcs.fname_to_datetime" title="data.helper_funcs.fname_to_datetime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fname_to_datetime</span></code></a>(fname)</p></td>
+<td><p>function to get datatime object from filename</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="api/data.helper_funcs.get_resampled.html#data.helper_funcs.get_resampled" title="data.helper_funcs.get_resampled"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_resampled</span></code></a>(df[, binsize])</p></td>
+<td><p>resamples the pandas dataframe</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="api/data.helper_funcs.get_time_chunck_list.html#data.helper_funcs.get_time_chunck_list" title="data.helper_funcs.get_time_chunck_list"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_time_chunck_list</span></code></a>(df[, resample, freq])</p></td>
+<td><p>Divides the time series to equally long chuncks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="api/data.helper_funcs.get_time_chunk.html#data.helper_funcs.get_time_chunk" title="data.helper_funcs.get_time_chunk"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_time_chunk</span></code></a>(df[, time, window_size])</p></td>
+<td><p>Divides the time series to chunks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="api/data.helper_funcs.sliding_window.html#data.helper_funcs.sliding_window" title="data.helper_funcs.sliding_window"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sliding_window</span></code></a>(df[, bins, step])</p></td>
+<td><p>a sliding window to create smaller timeseries</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
 <section id="module-data.prototyping_metrics">
 <span id="data-prototyping-metrics-module"></span><h2>data.prototyping_metrics Module<a class="headerlink" href="#module-data.prototyping_metrics" title="Permalink to this headline">¶</a></h2>
 <p>This module contains a list of functions that were prototyped
 in the wind_visualization.ipynb notebook.</p>
-<section id="functions">
-<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<section id="id3">
+<h3>Functions<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
@@ -219,7 +327,7 @@ in the wind_visualization.ipynb notebook.</p>
 <tr class="row-even"><td><p><a class="reference internal" href="api/data.prototyping_metrics.interpolate_orbit.html#data.prototyping_metrics.interpolate_orbit" title="data.prototyping_metrics.interpolate_orbit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">interpolate_orbit</span></code></a>(date, orbit[, kind])</p></td>
 <td><p>Function for interpolating an arbitrary time given the orbit of the spacecraft</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="api/data.prototyping_metrics.read_PSP_dataset.html#data.prototyping_metrics.read_PSP_dataset" title="data.prototyping_metrics.read_PSP_dataset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_PSP_dataset</span></code></a>(fname)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="api/data.prototyping_metrics.read_PSP_dataset.html#data.prototyping_metrics.read_PSP_dataset" title="data.prototyping_metrics.read_PSP_dataset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_PSP_dataset</span></code></a>(fname[, orbit, rads_norm, …])</p></td>
 <td><p>Function for reading in the PSP dataset</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="api/data.prototyping_metrics.read_WIND_dataset.html#data.prototyping_metrics.read_WIND_dataset" title="data.prototyping_metrics.read_WIND_dataset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_WIND_dataset</span></code></a>(fname)</p></td>
@@ -227,29 +335,6 @@ in the wind_visualization.ipynb notebook.</p>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="api/data.prototyping_metrics.return_nans.html#data.prototyping_metrics.return_nans" title="data.prototyping_metrics.return_nans"><code class="xref py py-obj docutils literal notranslate"><span class="pre">return_nans</span></code></a>(mag_df[, cols])</p></td>
 <td><p>Determine the number of nans present</p></td>
-</tr>
-</tbody>
-</table>
-</section>
-</section>
-<section id="module-data.generate_catalog">
-<span id="data-generate-catalog-module"></span><h2>data.generate_catalog Module<a class="headerlink" href="#module-data.generate_catalog" title="Permalink to this headline">¶</a></h2>
-<p>This module is used to generate a data catalog containing
-information about the sampling rates, magnetic field, and
-the quality of the data.’</p>
-<section id="id1">
-<h3>Functions<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<table class="longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="api/data.generate_catalog.analyze_file.html#data.generate_catalog.analyze_file" title="data.generate_catalog.analyze_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">analyze_file</span></code></a>([fname, instrument, orbit])</p></td>
-<td><p>Convenience function to handle all the steps</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="api/data.generate_catalog.generate_catalog.html#data.generate_catalog.generate_catalog" title="data.generate_catalog.generate_catalog"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_catalog</span></code></a>([start_year, stop_year, …])</p></td>
-<td><p>Generate a catalog of all the data between start_year and stop_year</p></td>
 </tr>
 </tbody>
 </table>
@@ -263,7 +348,7 @@ the quality of the data.’</p>
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="api/data.prototyping_metrics.check_sampling_freq.html" class="btn btn-neutral float-right" title="check_sampling_freq" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="api/data.data_loader.main.html" class="btn btn-neutral float-right" title="main" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="meet_the_team.html" class="btn btn-neutral float-left" title="Meet the Team" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 

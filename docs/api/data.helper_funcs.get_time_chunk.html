@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>compute_B_field_stats &mdash; solarwind_fdl_2021  documentation</title>
+  <title>get_time_chunk &mdash; solarwind_fdl_2021  documentation</title>
   
 
   
@@ -43,8 +43,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="convert_EPOCH" href="utils.prototyping_metrics.convert_EPOCH.html" />
-    <link rel="prev" title="compute_B_diff_stats" href="utils.prototyping_metrics.compute_B_diff_stats.html" /> 
+    <link rel="next" title="sliding_window" href="data.helper_funcs.sliding_window.html" />
+    <link rel="prev" title="get_time_chunck_list" href="data.helper_funcs.get_time_chunck_list.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -63,7 +63,7 @@
 
           
             
-            <img src="../_static/helio_badge.png" class="logo" alt="Logo"/>
+            <img src="../_static/_static/helio_badge.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -94,20 +94,21 @@
             
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../meet_the_team.html">Meet the Team</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../utils.html">Utility Modules</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../utils.html#module-utils.prototyping_metrics">utils.prototyping_metrics Module</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="../utils.html#functions">Functions</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="utils.prototyping_metrics.check_sampling_freq.html">check_sampling_freq</a></li>
-<li class="toctree-l4"><a class="reference internal" href="utils.prototyping_metrics.compute_B_diff_stats.html">compute_B_diff_stats</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">compute_B_field_stats</a></li>
-<li class="toctree-l4"><a class="reference internal" href="utils.prototyping_metrics.convert_EPOCH.html">convert_EPOCH</a></li>
-<li class="toctree-l4"><a class="reference internal" href="utils.prototyping_metrics.read_dataset.html">read_dataset</a></li>
-<li class="toctree-l4"><a class="reference internal" href="utils.prototyping_metrics.return_nans.html">return_nans</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../data.html">Data Subpackage</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../data.html#module-data.data_loader">data.data_loader Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data.html#module-data.generate_catalog">data.generate_catalog Module</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../data.html#module-data.helper_funcs">data.helper_funcs Module</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../data.html#id2">Functions</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="data.helper_funcs.fname_to_datetime.html">fname_to_datetime</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data.helper_funcs.get_resampled.html">get_resampled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data.helper_funcs.get_time_chunck_list.html">get_time_chunck_list</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">get_time_chunk</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data.helper_funcs.sliding_window.html">sliding_window</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../utils.html#module-utils.generate_catalog">utils.generate_catalog Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data.html#module-data.prototyping_metrics">data.prototyping_metrics Module</a></li>
 </ul>
 </li>
 </ul>
@@ -158,15 +159,15 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="../utils.html">Utility Modules</a> &raquo;</li>
+          <li><a href="../data.html">Data Subpackage</a> &raquo;</li>
         
-      <li>compute_B_field_stats</li>
+      <li>get_time_chunk</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/api/utils.prototyping_metrics.compute_B_field_stats.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/api/data.helper_funcs.get_time_chunk.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -179,24 +180,30 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="compute-b-field-stats">
-<h1>compute_B_field_stats<a class="headerlink" href="#compute-b-field-stats" title="Permalink to this headline">¶</a></h1>
+  <section id="get-time-chunk">
+<h1>get_time_chunk<a class="headerlink" href="#get-time-chunk" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
-<dt class="sig sig-object py" id="utils.prototyping_metrics.compute_B_field_stats">
-<span class="sig-prename descclassname"><span class="pre">utils.prototyping_metrics.</span></span><span class="sig-name descname"><span class="pre">compute_B_field_stats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mag_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.prototyping_metrics.compute_B_field_stats" title="Permalink to this definition">¶</a></dt>
-<dd><p>Compute statistics on the magnetic field</p>
+<dt class="sig sig-object py" id="data.helper_funcs.get_time_chunk">
+<span class="sig-prename descclassname"><span class="pre">data.helper_funcs.</span></span><span class="sig-name descname"><span class="pre">get_time_chunk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">datetime.timedelta(seconds=1800)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#data.helper_funcs.get_time_chunk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Divides the time series to chunks</p>
+<p>The splitting of time series is carried out by defining
+a central timestep and by using timedelta to select a
+range.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>mag_df</strong> (<em>pd.DataFrame</em>) – Dataframe containing magnetometer data</p></li>
-<li><p><strong>cols</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><em>list</em></a>) – List of column names to process</p></li>
+<li><p><strong>df</strong> (<em>pandas dataframe</em>) – a pandas dataframe containing a single timeseries</p></li>
+<li><p><strong>time</strong> (<em>timestamp</em>) – the central timestamp in our selected data chunk
+default is the first timestamp of the dataframe.</p></li>
+<li><p><strong>window_size</strong> (<em>datetime timedelta</em>) – the desired timedelta
+default is 30 minutes</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>stats_data</strong> – <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a> containing statistics on the magnetic field</p>
+<dd class="field-even"><p><strong>window</strong> – a sliced and shortened dataframe</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.9)">dict</a></p>
+<dd class="field-odd"><p>pandas dataframe</p>
 </dd>
 </dl>
 </dd></dl>
@@ -209,8 +216,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="utils.prototyping_metrics.convert_EPOCH.html" class="btn btn-neutral float-right" title="convert_EPOCH" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="utils.prototyping_metrics.compute_B_diff_stats.html" class="btn btn-neutral float-left" title="compute_B_diff_stats" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="data.helper_funcs.sliding_window.html" class="btn btn-neutral float-right" title="sliding_window" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="data.helper_funcs.get_time_chunck_list.html" class="btn btn-neutral float-left" title="get_time_chunck_list" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
