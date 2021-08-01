@@ -133,6 +133,7 @@
 <li class="toctree-l4"><a class="reference internal" href="api/data.prototyping_metrics.convert_PSP_EPOCH.html">convert_PSP_EPOCH</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/data.prototyping_metrics.convert_WIND_EPOCH.html">convert_WIND_EPOCH</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/data.prototyping_metrics.interpolate_orbit.html">interpolate_orbit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/data.prototyping_metrics.psp_rad_norm.html">psp_rad_norm</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/data.prototyping_metrics.read_PSP_dataset.html">read_PSP_dataset</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/data.prototyping_metrics.read_WIND_dataset.html">read_WIND_dataset</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/data.prototyping_metrics.return_nans.html">return_nans</a></li>
@@ -142,6 +143,8 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="model.html">Model Subpackage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">Utils Subpackage</a></li>
 </ul>
 
             
@@ -278,7 +281,7 @@ the quality of the data.’</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="api/data.helper_funcs.fname_to_datetime.html#data.helper_funcs.fname_to_datetime" title="data.helper_funcs.fname_to_datetime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fname_to_datetime</span></code></a>(fname)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="api/data.helper_funcs.fname_to_datetime.html#data.helper_funcs.fname_to_datetime" title="data.helper_funcs.fname_to_datetime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fname_to_datetime</span></code></a>(fname[, fmt])</p></td>
 <td><p>function to get datatime object from filename</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="api/data.helper_funcs.get_resampled.html#data.helper_funcs.get_resampled" title="data.helper_funcs.get_resampled"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_resampled</span></code></a>(df[, binsize])</p></td>
@@ -327,13 +330,16 @@ in the wind_visualization.ipynb notebook.</p>
 <tr class="row-even"><td><p><a class="reference internal" href="api/data.prototyping_metrics.interpolate_orbit.html#data.prototyping_metrics.interpolate_orbit" title="data.prototyping_metrics.interpolate_orbit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">interpolate_orbit</span></code></a>(date, orbit[, kind])</p></td>
 <td><p>Function for interpolating an arbitrary time given the orbit of the spacecraft</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="api/data.prototyping_metrics.read_PSP_dataset.html#data.prototyping_metrics.read_PSP_dataset" title="data.prototyping_metrics.read_PSP_dataset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_PSP_dataset</span></code></a>(fname[, orbit, rads_norm, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="api/data.prototyping_metrics.psp_rad_norm.html#data.prototyping_metrics.psp_rad_norm" title="data.prototyping_metrics.psp_rad_norm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">psp_rad_norm</span></code></a>(psp_tmp_mag, psp_time, orbit, …)</p></td>
+<td><p>Normalizes the PSP magnetic field data with respect to radial distance from Sun :param psp_tmp_mag: pandas.DataFrame that contains the magnetic field data :type psp_tmp_mag: pandas.DataFrame :param psp_time: Time of measurements :type psp_time: datetime :param orbit: Dataframe with instrument’s orbit :type orbit: pd.DataFrame :param exponents_list: Numpy array containing exponentials from curve fits to magnetic field vs heliocentric distance :type exponents_list: np.array</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="api/data.prototyping_metrics.read_PSP_dataset.html#data.prototyping_metrics.read_PSP_dataset" title="data.prototyping_metrics.read_PSP_dataset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_PSP_dataset</span></code></a>(fname[, orbit, rads_norm, …])</p></td>
 <td><p>Function for reading in the PSP dataset</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="api/data.prototyping_metrics.read_WIND_dataset.html#data.prototyping_metrics.read_WIND_dataset" title="data.prototyping_metrics.read_WIND_dataset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_WIND_dataset</span></code></a>(fname)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="api/data.prototyping_metrics.read_WIND_dataset.html#data.prototyping_metrics.read_WIND_dataset" title="data.prototyping_metrics.read_WIND_dataset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_WIND_dataset</span></code></a>(fname)</p></td>
 <td><p>Function for reading the WIND the dataset</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="api/data.prototyping_metrics.return_nans.html#data.prototyping_metrics.return_nans" title="data.prototyping_metrics.return_nans"><code class="xref py py-obj docutils literal notranslate"><span class="pre">return_nans</span></code></a>(mag_df[, cols])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="api/data.prototyping_metrics.return_nans.html#data.prototyping_metrics.return_nans" title="data.prototyping_metrics.return_nans"><code class="xref py py-obj docutils literal notranslate"><span class="pre">return_nans</span></code></a>(mag_df[, cols])</p></td>
 <td><p>Determine the number of nans present</p></td>
 </tr>
 </tbody>

@@ -28,6 +28,8 @@ ________
 
    meet_the_team
    data
+   model
+   utils
 
 
 

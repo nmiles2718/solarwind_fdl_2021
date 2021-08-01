@@ -108,6 +108,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../data.html#module-data.prototyping_metrics">data.prototyping_metrics Module</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../model.html">Model Subpackage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../utils.html">Utils Subpackage</a></li>
 </ul>
 
             
@@ -194,20 +196,14 @@ the required data for the final catalog.</p>
 <li><p><strong>histogram</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) – Flag that triggers the creation of the data histogram</p></li>
 <li><p><strong>hist_max</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) – Maximum magnetic field to be included in histogram</p></li>
 <li><p><strong>bin_width</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) – Bin width to use in the histogram</p></li>
+<li><p><strong>rads_norm</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) – Flag that triggers the normalization of the magnetic field according to the
+distance to the Sun</p></li>
+<li><p><strong>exponents_list</strong> (<em>np.array</em>) – Provides list of exponents for each mgn component to normalize the mgn field with respect
+to the radial distance from the Sun</p></li>
 </ul>
 </dd>
-</dl>
-<dl class="simple">
-<dt>rads_norm<span class="classifier">bool</span></dt><dd><p>Flag that triggers the normalization of the magnetic field according to the
-distance to the Sun</p>
-</dd>
-<dt>exponents_list<span class="classifier">np.array</span></dt><dd><p>Provides list of exponents for each mgn component to normalize the mgn field with respect
-to the radial distance from the Sun</p>
-</dd>
-</dl>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><ul class="simple">
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
 <li><p><strong>data_dict</strong> (<em>dict</em>) – Python <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a> containing all of the data we</p></li>
 <li><p><strong>hist</strong> (<em>np.array</em>) – Histogram of each of the three components for a given file</p></li>
 </ul>

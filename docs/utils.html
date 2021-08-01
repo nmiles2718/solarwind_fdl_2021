@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Utility Modules &mdash; solarwind_fdl_2021  documentation</title>
+  <title>Utils Subpackage &mdash; solarwind_fdl_2021  documentation</title>
   
 
   
@@ -43,8 +43,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="check_sampling_freq" href="api/utils.prototyping_metrics.check_sampling_freq.html" />
-    <link rel="prev" title="Meet the Team" href="meet_the_team.html" /> 
+    <link rel="next" title="datetime_range" href="api/utils.time_chunking.datetime_range.html" />
+    <link rel="prev" title="iSaxPipeline" href="api/model.isax_model.iSaxPipeline.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -63,7 +63,7 @@
 
           
             
-            <img src="_static/helio_badge.png" class="logo" alt="Logo"/>
+            <img src="_static/_static/helio_badge.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -94,23 +94,13 @@
             
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="meet_the_team.html">Meet the Team</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Utility Modules</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#module-utils.prototyping_metrics">utils.prototyping_metrics Module</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="data.html">Data Subpackage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model.html">Model Subpackage</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Utils Subpackage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-utils.time_chunking">utils.time_chunking Module</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="api/utils.prototyping_metrics.check_sampling_freq.html">check_sampling_freq</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/utils.prototyping_metrics.compute_B_diff_stats.html">compute_B_diff_stats</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/utils.prototyping_metrics.compute_B_field_stats.html">compute_B_field_stats</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/utils.prototyping_metrics.convert_EPOCH.html">convert_EPOCH</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/utils.prototyping_metrics.read_dataset.html">read_dataset</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/utils.prototyping_metrics.return_nans.html">return_nans</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#module-utils.generate_catalog">utils.generate_catalog Module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id1">Functions</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="api/utils.generate_catalog.analyze_file.html">analyze_file</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/utils.generate_catalog.generate_catalog.html">generate_catalog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/utils.time_chunking.datetime_range.html">datetime_range</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/utils.time_chunking.time_chunking.html">time_chunking</a></li>
 </ul>
 </li>
 </ul>
@@ -165,7 +155,7 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Utility Modules</li>
+      <li>Utils Subpackage</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -184,15 +174,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="utility-modules">
-<h1>Utility Modules<a class="headerlink" href="#utility-modules" title="Permalink to this headline">¶</a></h1>
-<section id="module-utils.prototyping_metrics">
-<span id="utils-prototyping-metrics-module"></span><h2>utils.prototyping_metrics Module<a class="headerlink" href="#module-utils.prototyping_metrics" title="Permalink to this headline">¶</a></h2>
-<p>This module contains a list of functions that were prototyped
-in the wind_visualization.ipynb. The purpose of this module is
-to encapsulate the key functions developed in an interactive manner
-in the jupyter notebook, as well as added the necessary docstrings
-and desired formatting.</p>
+  <section id="utils-subpackage">
+<h1>Utils Subpackage<a class="headerlink" href="#utils-subpackage" title="Permalink to this headline">¶</a></h1>
+<section id="module-utils.time_chunking">
+<span id="utils-time-chunking-module"></span><h2>utils.time_chunking Module<a class="headerlink" href="#module-utils.time_chunking" title="Permalink to this headline">¶</a></h2>
 <section id="functions">
 <h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
 <table class="longtable docutils align-default">
@@ -201,46 +186,11 @@ and desired formatting.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="api/utils.prototyping_metrics.check_sampling_freq.html#utils.prototyping_metrics.check_sampling_freq" title="utils.prototyping_metrics.check_sampling_freq"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_sampling_freq</span></code></a>(mag_df[, min_sep, verbose])</p></td>
-<td><p>Determine the sampling frequency from the data</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="api/utils.time_chunking.datetime_range.html#utils.time_chunking.datetime_range" title="utils.time_chunking.datetime_range"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datetime_range</span></code></a>(start, end, delta)</p></td>
+<td><p>Return an array of dates between start and end dates at a regular delta interval</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="api/utils.prototyping_metrics.compute_B_diff_stats.html#utils.prototyping_metrics.compute_B_diff_stats" title="utils.prototyping_metrics.compute_B_diff_stats"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_B_diff_stats</span></code></a>(mag_df[, cols])</p></td>
-<td><p>Compute statistics on the difference between datapoints of the magne  field</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="api/utils.prototyping_metrics.compute_B_field_stats.html#utils.prototyping_metrics.compute_B_field_stats" title="utils.prototyping_metrics.compute_B_field_stats"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_B_field_stats</span></code></a>(mag_df[, cols])</p></td>
-<td><p>Compute statistics on the magnetic field</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="api/utils.prototyping_metrics.convert_EPOCH.html#utils.prototyping_metrics.convert_EPOCH" title="utils.prototyping_metrics.convert_EPOCH"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert_EPOCH</span></code></a>(cdf)</p></td>
-<td><p>Convenience function for generating datetimes</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="api/utils.prototyping_metrics.read_dataset.html#utils.prototyping_metrics.read_dataset" title="utils.prototyping_metrics.read_dataset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_dataset</span></code></a>(fname)</p></td>
-<td><p>Function for reading in the dataset</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="api/utils.prototyping_metrics.return_nans.html#utils.prototyping_metrics.return_nans" title="utils.prototyping_metrics.return_nans"><code class="xref py py-obj docutils literal notranslate"><span class="pre">return_nans</span></code></a>(mag_df[, cols])</p></td>
-<td><p>Determine the number of nans present</p></td>
-</tr>
-</tbody>
-</table>
-</section>
-</section>
-<section id="module-utils.generate_catalog">
-<span id="utils-generate-catalog-module"></span><h2>utils.generate_catalog Module<a class="headerlink" href="#module-utils.generate_catalog" title="Permalink to this headline">¶</a></h2>
-<p>This module is used to generate a data catalog containing
-information about the sampling rates, magnetic field, and
-the quality of the data.’</p>
-<section id="id1">
-<h3>Functions<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<table class="longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="api/utils.generate_catalog.analyze_file.html#utils.generate_catalog.analyze_file" title="utils.generate_catalog.analyze_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">analyze_file</span></code></a>([fname])</p></td>
-<td><p>Convenience function to handle all the steps</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="api/utils.generate_catalog.generate_catalog.html#utils.generate_catalog.generate_catalog" title="utils.generate_catalog.generate_catalog"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_catalog</span></code></a>([start_year, stop_year, …])</p></td>
-<td><p>Generate a catalog of all the data between start_year and stop_year</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="api/utils.time_chunking.time_chunking.html#utils.time_chunking.time_chunking" title="utils.time_chunking.time_chunking"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_chunking</span></code></a>(mag_df, cols[, cadence, …])</p></td>
+<td><p>Return segments that are each our time duration of choice</p></td>
 </tr>
 </tbody>
 </table>
@@ -254,8 +204,8 @@ the quality of the data.’</p>
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="api/utils.prototyping_metrics.check_sampling_freq.html" class="btn btn-neutral float-right" title="check_sampling_freq" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="meet_the_team.html" class="btn btn-neutral float-left" title="Meet the Team" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="api/utils.time_chunking.datetime_range.html" class="btn btn-neutral float-right" title="datetime_range" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="api/model.isax_model.iSaxPipeline.html" class="btn btn-neutral float-left" title="iSaxPipeline" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

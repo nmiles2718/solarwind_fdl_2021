@@ -1,0 +1,551 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>iSaxPipeline &mdash; solarwind_fdl_2021  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Utils Subpackage" href="../utils.html" />
+    <link rel="prev" title="Model Subpackage" href="../model.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> solarwind_fdl_2021
+          
+
+          
+            
+            <img src="../_static/_static/helio_badge.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../meet_the_team.html">Meet the Team</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data.html">Data Subpackage</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../model.html">Model Subpackage</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../model.html#module-model.isax_model">model.isax_model Module</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../model.html#classes">Classes</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">iSaxPipeline</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../utils.html">Utils Subpackage</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">solarwind_fdl_2021</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../model.html">Model Subpackage</a> &raquo;</li>
+        
+      <li>iSaxPipeline</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/api/model.isax_model.iSaxPipeline.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="isaxpipeline">
+<h1>iSaxPipeline<a class="headerlink" href="#isaxpipeline" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="model.isax_model.iSaxPipeline">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">model.isax_model.</span></span><span class="sig-name descname"><span class="pre">iSaxPipeline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'2018-01-01'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'2018-01-31'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date_fmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'%Y-%m-%d'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">catalog_fname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orbit_fname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_cardinality</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_cardinality</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">128</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">std_x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3.4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">std_y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3.4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_z</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">std_z</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3.4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">200</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">word_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#model.isax_model.iSaxPipeline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p class="rubric">Attributes Summary</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#model.isax_model.iSaxPipeline.catalog" title="model.isax_model.iSaxPipeline.catalog"><code class="xref py py-obj docutils literal notranslate"><span class="pre">catalog</span></code></a></p></td>
+<td><p>Attribute to store the PSP data catalog dataframe</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#model.isax_model.iSaxPipeline.current_file" title="model.isax_model.iSaxPipeline.current_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">current_file</span></code></a></p></td>
+<td><p>Attribute to store the current file we are analyzing</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#model.isax_model.iSaxPipeline.input_parameters" title="model.isax_model.iSaxPipeline.input_parameters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">input_parameters</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#model.isax_model.iSaxPipeline.interp_mag_seq" title="model.isax_model.iSaxPipeline.interp_mag_seq"><code class="xref py py-obj docutils literal notranslate"><span class="pre">interp_mag_seq</span></code></a></p></td>
+<td><p>Attribute for storing the interpolated, chunked magnetic field data</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#model.isax_model.iSaxPipeline.interp_time_seq" title="model.isax_model.iSaxPipeline.interp_time_seq"><code class="xref py py-obj docutils literal notranslate"><span class="pre">interp_time_seq</span></code></a></p></td>
+<td><p>Attribute for storing the interpolated, chunked times</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#model.isax_model.iSaxPipeline.mag_df" title="model.isax_model.iSaxPipeline.mag_df"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mag_df</span></code></a></p></td>
+<td><p>pandas.DataFrame containing magnetic field data</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#model.isax_model.iSaxPipeline.max_cardinality" title="model.isax_model.iSaxPipeline.max_cardinality"><code class="xref py py-obj docutils literal notranslate"><span class="pre">max_cardinality</span></code></a></p></td>
+<td><p>Maximum cardinality of SAX word</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#model.isax_model.iSaxPipeline.min_cardinality" title="model.isax_model.iSaxPipeline.min_cardinality"><code class="xref py py-obj docutils literal notranslate"><span class="pre">min_cardinality</span></code></a></p></td>
+<td><p>Minimum cardinality of SAX word</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#model.isax_model.iSaxPipeline.mu" title="model.isax_model.iSaxPipeline.mu"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mu</span></code></a></p></td>
+<td><p>The mean of the entire dataset.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#model.isax_model.iSaxPipeline.node_info" title="model.isax_model.iSaxPipeline.node_info"><code class="xref py py-obj docutils literal notranslate"><span class="pre">node_info</span></code></a></p></td>
+<td><p>Information generated for a given node</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#model.isax_model.iSaxPipeline.nodes_at_level" title="model.isax_model.iSaxPipeline.nodes_at_level"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nodes_at_level</span></code></a></p></td>
+<td><p>The nodes at a given level</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#model.isax_model.iSaxPipeline.orbit" title="model.isax_model.iSaxPipeline.orbit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">orbit</span></code></a></p></td>
+<td><p>The PSP orbit data</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#model.isax_model.iSaxPipeline.std" title="model.isax_model.iSaxPipeline.std"><code class="xref py py-obj docutils literal notranslate"><span class="pre">std</span></code></a></p></td>
+<td><p>The standard deviation of the entire dataset.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#model.isax_model.iSaxPipeline.sw_forest" title="model.isax_model.iSaxPipeline.sw_forest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sw_forest</span></code></a></p></td>
+<td><p>The iSAX Forest tree object</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#model.isax_model.iSaxPipeline.threshold" title="model.isax_model.iSaxPipeline.threshold"><code class="xref py py-obj docutils literal notranslate"><span class="pre">threshold</span></code></a></p></td>
+<td><p>The maximum number of timeseries held at a terminal node.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#model.isax_model.iSaxPipeline.ts" title="model.isax_model.iSaxPipeline.ts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ts</span></code></a></p></td>
+<td><p>Sequence of magnetic field data formatted for input to iSAX</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#model.isax_model.iSaxPipeline.ts_loc" title="model.isax_model.iSaxPipeline.ts_loc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ts_loc</span></code></a></p></td>
+<td><p>Annotations of the sequences of magnetic field data</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#model.isax_model.iSaxPipeline.word_size" title="model.isax_model.iSaxPipeline.word_size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">word_size</span></code></a></p></td>
+<td><p>The length of each SAX word</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Summary</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#model.isax_model.iSaxPipeline.build_annotations" title="model.isax_model.iSaxPipeline.build_annotations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">build_annotations</span></code></a>()</p></td>
+<td><p>Build the annotations for all the sequences of chunked data</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#model.isax_model.iSaxPipeline.generate_nodes" title="model.isax_model.iSaxPipeline.generate_nodes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_nodes</span></code></a>([component, save])</p></td>
+<td><p>Generate the iSAX tree</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#model.isax_model.iSaxPipeline.get_node_info" title="model.isax_model.iSaxPipeline.get_node_info"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_node_info</span></code></a>([component, node_level, node_num])</p></td>
+<td><p>Get the node annotation and time series data for given level</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#model.isax_model.iSaxPipeline.get_nodes_at_level" title="model.isax_model.iSaxPipeline.get_nodes_at_level"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_nodes_at_level</span></code></a>([component, node_level])</p></td>
+<td><p>Get all the nodes and terminal nodes at specific level</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#model.isax_model.iSaxPipeline.get_time_chunks" title="model.isax_model.iSaxPipeline.get_time_chunks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_time_chunks</span></code></a>(mag_df, cols[, cadence, …])</p></td>
+<td><p>Run the time chunking step</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#model.isax_model.iSaxPipeline.load_root" title="model.isax_model.iSaxPipeline.load_root"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_root</span></code></a>(fname)</p></td>
+<td><p>Attempting to load the root node</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#model.isax_model.iSaxPipeline.read_file" title="model.isax_model.iSaxPipeline.read_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_file</span></code></a>(fname[, rads_norm])</p></td>
+<td><p>Read in the dataset and format it for input to SAX tree</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#model.isax_model.iSaxPipeline.run_pipeline" title="model.isax_model.iSaxPipeline.run_pipeline"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run_pipeline</span></code></a>(flist[, cadence, chunk_size, …])</p></td>
+<td><p>Run the full pipeline</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#model.isax_model.iSaxPipeline.save" title="model.isax_model.iSaxPipeline.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>([overwrite])</p></td>
+<td><p>Method for saving the root node of the iSAX tree and related parameters</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes Documentation</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="model.isax_model.iSaxPipeline.catalog">
+<span class="sig-name descname"><span class="pre">catalog</span></span><a class="headerlink" href="#model.isax_model.iSaxPipeline.catalog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attribute to store the PSP data catalog dataframe</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="model.isax_model.iSaxPipeline.current_file">
+<span class="sig-name descname"><span class="pre">current_file</span></span><a class="headerlink" href="#model.isax_model.iSaxPipeline.current_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attribute to store the current file we are analyzing</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="model.isax_model.iSaxPipeline.input_parameters">
+<span class="sig-name descname"><span class="pre">input_parameters</span></span><a class="headerlink" href="#model.isax_model.iSaxPipeline.input_parameters" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="model.isax_model.iSaxPipeline.interp_mag_seq">
+<span class="sig-name descname"><span class="pre">interp_mag_seq</span></span><a class="headerlink" href="#model.isax_model.iSaxPipeline.interp_mag_seq" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attribute for storing the interpolated, chunked magnetic field data</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="model.isax_model.iSaxPipeline.interp_time_seq">
+<span class="sig-name descname"><span class="pre">interp_time_seq</span></span><a class="headerlink" href="#model.isax_model.iSaxPipeline.interp_time_seq" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attribute for storing the interpolated, chunked times</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="model.isax_model.iSaxPipeline.mag_df">
+<span class="sig-name descname"><span class="pre">mag_df</span></span><a class="headerlink" href="#model.isax_model.iSaxPipeline.mag_df" title="Permalink to this definition">¶</a></dt>
+<dd><p>pandas.DataFrame containing magnetic field data</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="model.isax_model.iSaxPipeline.max_cardinality">
+<span class="sig-name descname"><span class="pre">max_cardinality</span></span><a class="headerlink" href="#model.isax_model.iSaxPipeline.max_cardinality" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum cardinality of SAX word</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="model.isax_model.iSaxPipeline.min_cardinality">
+<span class="sig-name descname"><span class="pre">min_cardinality</span></span><a class="headerlink" href="#model.isax_model.iSaxPipeline.min_cardinality" title="Permalink to this definition">¶</a></dt>
+<dd><p>Minimum cardinality of SAX word</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="model.isax_model.iSaxPipeline.mu">
+<span class="sig-name descname"><span class="pre">mu</span></span><a class="headerlink" href="#model.isax_model.iSaxPipeline.mu" title="Permalink to this definition">¶</a></dt>
+<dd><p>The mean of the entire dataset.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="model.isax_model.iSaxPipeline.node_info">
+<span class="sig-name descname"><span class="pre">node_info</span></span><a class="headerlink" href="#model.isax_model.iSaxPipeline.node_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Information generated for a given node</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="model.isax_model.iSaxPipeline.nodes_at_level">
+<span class="sig-name descname"><span class="pre">nodes_at_level</span></span><a class="headerlink" href="#model.isax_model.iSaxPipeline.nodes_at_level" title="Permalink to this definition">¶</a></dt>
+<dd><p>The nodes at a given level</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="model.isax_model.iSaxPipeline.orbit">
+<span class="sig-name descname"><span class="pre">orbit</span></span><a class="headerlink" href="#model.isax_model.iSaxPipeline.orbit" title="Permalink to this definition">¶</a></dt>
+<dd><p>The PSP orbit data</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="model.isax_model.iSaxPipeline.std">
+<span class="sig-name descname"><span class="pre">std</span></span><a class="headerlink" href="#model.isax_model.iSaxPipeline.std" title="Permalink to this definition">¶</a></dt>
+<dd><p>The standard deviation of the entire dataset.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="model.isax_model.iSaxPipeline.sw_forest">
+<span class="sig-name descname"><span class="pre">sw_forest</span></span><a class="headerlink" href="#model.isax_model.iSaxPipeline.sw_forest" title="Permalink to this definition">¶</a></dt>
+<dd><p>The iSAX Forest tree object</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="model.isax_model.iSaxPipeline.threshold">
+<span class="sig-name descname"><span class="pre">threshold</span></span><a class="headerlink" href="#model.isax_model.iSaxPipeline.threshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum number of timeseries held at a terminal node.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="model.isax_model.iSaxPipeline.ts">
+<span class="sig-name descname"><span class="pre">ts</span></span><a class="headerlink" href="#model.isax_model.iSaxPipeline.ts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sequence of magnetic field data formatted for input to iSAX</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="model.isax_model.iSaxPipeline.ts_loc">
+<span class="sig-name descname"><span class="pre">ts_loc</span></span><a class="headerlink" href="#model.isax_model.iSaxPipeline.ts_loc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Annotations of the sequences of magnetic field data</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="model.isax_model.iSaxPipeline.word_size">
+<span class="sig-name descname"><span class="pre">word_size</span></span><a class="headerlink" href="#model.isax_model.iSaxPipeline.word_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>The length of each SAX word</p>
+</dd></dl>
+
+<p class="rubric">Methods Documentation</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="model.isax_model.iSaxPipeline.build_annotations">
+<span class="sig-name descname"><span class="pre">build_annotations</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#model.isax_model.iSaxPipeline.build_annotations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build the annotations for all the sequences of chunked data</p>
+<p>This function loops through the time chunks and contructs
+the annotations used to identify the timeseries data stored in
+a given node.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="model.isax_model.iSaxPipeline.generate_nodes">
+<span class="sig-name descname"><span class="pre">generate_nodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">component</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'x'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#model.isax_model.iSaxPipeline.generate_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate the iSAX tree</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="model.isax_model.iSaxPipeline.get_node_info">
+<span class="sig-name descname"><span class="pre">get_node_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">component</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_num</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#model.isax_model.iSaxPipeline.get_node_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the node annotation and time series data for given level</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node_level</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – The node level</p></li>
+<li><p><strong>node_num</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – The node number</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="model.isax_model.iSaxPipeline.get_nodes_at_level">
+<span class="sig-name descname"><span class="pre">get_nodes_at_level</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">component</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#model.isax_model.iSaxPipeline.get_nodes_at_level" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all the nodes and terminal nodes at specific level</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>node_level</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – The node level</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="model.isax_model.iSaxPipeline.get_time_chunks">
+<span class="sig-name descname"><span class="pre">get_time_chunks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mag_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cols</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cadence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">datetime.timedelta(seconds=30)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunk_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">datetime.timedelta(seconds=7200)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smooth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smooth_window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">60</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detrend</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detrend_window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1800</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#model.isax_model.iSaxPipeline.get_time_chunks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run the time chunking step</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mag_df</strong> (<a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.3.1)"><em>pandas.DataFrame</em></a>) – DataFrame containing all the magnetic field data</p></li>
+<li><p><strong>cols</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><em>list</em></a>) – Columns of the pandas.DataFrame that should be chunked</p></li>
+<li><p><strong>cadence</strong> (<em>dt.timedelta</em>) – The final cadence of the interpolated timeseries, default is 30 seconds</p></li>
+<li><p><strong>chunk_size</strong> (<em>dt.timedelta</em>) – The duration of each chunk, default is 2 hours</p></li>
+<li><p><strong>smooth</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) – Boolean flag for indicating whether or not to smooth the data, default is True</p></li>
+<li><p><strong>smooth_window</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – The size of the smoothing window in seconds, default is 60 seconds</p></li>
+<li><p><strong>detrend</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em>, </em><em>optional</em>) – Boolean flag for indicating whether or not to detrend the data, default is True</p></li>
+<li><p><strong>detrend_window</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em>) – The size of the smoothing window in seconds, default is 1800 seconds</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="model.isax_model.iSaxPipeline.load_root">
+<span class="sig-name descname"><span class="pre">load_root</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#model.isax_model.iSaxPipeline.load_root" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attempting to load the root node</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="model.isax_model.iSaxPipeline.read_file">
+<span class="sig-name descname"><span class="pre">read_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rads_norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#model.isax_model.iSaxPipeline.read_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read in the dataset and format it for input to SAX tree</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fname</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – The filename we wish to process</p></li>
+<li><p><strong>rads_norm</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) – Boolean flag for indicating whether or not to perform radial normalization</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="model.isax_model.iSaxPipeline.run_pipeline">
+<span class="sig-name descname"><span class="pre">run_pipeline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cadence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">datetime.timedelta(microseconds=10000)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunk_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">datetime.timedelta(seconds=120)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rads_norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smooth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smooth_window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detrend</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detrend_window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1800</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#model.isax_model.iSaxPipeline.run_pipeline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run the full pipeline</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>flist</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><em>list</em></a>) – list of files that you want to process</p></li>
+<li><p><strong>cadence</strong> (<em>dt.timedelta</em>) – The final cadence of the interpolated timeseries, default is 0.01 seconds</p></li>
+<li><p><strong>chunk_size</strong> (<em>dt.timedelta</em>) – The duration of each chunk, default is 120 seconds</p></li>
+<li><p><strong>rads_norm</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em>, </em><em>optional</em>) – Boolean flag for controlling the normalization of the magnetic field
+to account for the decay of the field strength with heliocentric distance</p></li>
+<li><p><strong>smooth</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) – Boolean flag for indicating whether or not to smooth the data, default is True</p></li>
+<li><p><strong>smooth_window</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – The size of the smoothing window in seconds, default is 60 seconds</p></li>
+<li><p><strong>detrend</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em>, </em><em>optional</em>) – Boolean flag for indicating whether or not to detrend the data, default is True</p></li>
+<li><p><strong>detrend_window</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em>) – The size of the smoothing window in seconds, default is 1800 seconds</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="model.isax_model.iSaxPipeline.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">overwrite</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#model.isax_model.iSaxPipeline.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method for saving the root node of the iSAX tree and related parameters</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../utils.html" class="btn btn-neutral float-right" title="Utils Subpackage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../model.html" class="btn btn-neutral float-left" title="Model Subpackage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright FDL 2021, Solar Wind Team.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
